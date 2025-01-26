@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peso Ideal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Peso Ideal</h1>
+    <button id="leyendaBtn">Ver Leyenda del IMC</button>
+    <div class="form-group">
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" placeholder="Ej: 25">
+    </div>
+    <div class="form-group">
+      <label for="altura">Altura (cm):</label>
+      <input type="number" id="altura" placeholder="Ej: 170">
+    </div>
+    <div class="form-group">
+      <label for="peso">Peso Actual (kg):</label>
+      <input type="number" id="peso" placeholder="Ej: 70">
+    </div>
+    <button id="calcular">Calcular</button>
+    <div id="resultado"></div>
+    <div id="imc"></div>
+    <div id="kilos-extras"></div>
+    <button id="recomendacionesBtn" style="display: none;">Ver Recomendaciones</button>
+  </div>
+
+  <!-- Modal para la leyenda del IMC -->
+  <div id="leyendaModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Leyenda del IMC</h2>
+      <p>El Índice de Masa Corporal (IMC) se clasifica de la siguiente manera:</p>
+      <ul>
+        <li><strong>Menos de 18.5:</strong> Peso inferior a lo normal</li>
+        <li><strong>18.5 – 24.9:</strong> Peso ideal o Normal</li>
+        <li><strong>25.0 – 29.9:</strong> Peso superior a lo normal</li>
+        <li><strong>30.0 – 34.9:</strong> Obesidad grado 1</li>
+        <li><strong>35.0 – 39.9:</strong> Obesidad grado 2</li>
+        <li><strong>Más de 40.0:</strong> Obesidad grado 3 (mórbida)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal para las recomendaciones -->
+  <div id="recomendacionesModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Recomendaciones</h2>
+      <div id="recomendacionesTexto"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
